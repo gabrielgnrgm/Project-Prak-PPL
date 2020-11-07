@@ -10,5 +10,6 @@ package Aplikasi;
  * @author USER
  */
 public class Pasien {
-    
+    String id;
+    String password; 
 }
