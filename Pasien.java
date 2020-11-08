@@ -21,7 +21,7 @@ public class Pasien {
         this.email=email;
     }
 //get Method    
-    public String getiD(){
+    public String getId(){
         return nik;
     }
     
