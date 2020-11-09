@@ -1,7 +1,9 @@
 public class User {
   private int user_id;
   private String email, username, password;
-  private 
+  private enum role {
+    Pasien, Psikiater, Administrator
+  }
   
   public User(int id, String email, String username, String password, String role){
     this.id=id;
