@@ -13,14 +13,20 @@ public class User {
   }
 
   public void loginWithUsername(String username, String password){
-    if(username==this.username && password==this.password){
+    if(username.equals(this.username) && password.equals(this.password)){
       //Apa ini? Aku bingung?
+    }
+    else{
+     System.out.println("Username atau password salah"); 
     }
   }
   
   public void loginWithEmail(String email, String password){
-    if(email==this.email && password==this.password){
+    if(email.equals(this.email) && password.equals(this.password)){
       //Apa ini? Aku bingung
     }
+    else{
+     System.out.println("Email atau password salah");  
+    } 
   }
 }
