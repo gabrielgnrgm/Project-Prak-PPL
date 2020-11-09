@@ -17,13 +17,13 @@ public class User {
 
   public void loginWithUsername(String username, String password){
     if(username.equals(this.username) && password.equals(this.password)){
-      //Apa ini? Aku bingung?
+      //Code to login
     }
   }
   
   public void loginWithEmail(String email, String password){
     if(email.equals(this.email) && password.equals(this.password)){
-      //Apa ini? Aku bingung
+      //Code to login
     }
   }
   
