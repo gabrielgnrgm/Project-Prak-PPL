@@ -1,41 +1,53 @@
 package Aplikasi;
 
-public class Pasien {
-    private String nik;
-    private String password;
+public class Pasien extends User {
+    private int nik;
     private String nama;
-    private String email;
-  
+    private String alamat;
     
-    public Pasien(String nama,String nik,String email,String password){
+    enum Kelamin{
+        Laki,Perempuan
+    };
+    Kelamin kelamin;
+  
+    //id,nama,email username,password,role gender,nik,alamat
+    public Pasien(String nama,int nik,String alamat,String jenis_kelamin){
+       //Pasien
        this.nik=nik;
        this.nama=nama;
-       this.email=email;
-       this.password=password;
+       if(jenis_kelamin.equals("L")){
+           kelamin=Kelamin.Laki;
+       }
+       else{
+           kelamin=Kelamin.Perempuan;
+       }
+       this.alamat=alamat;
+       
     }
-//set Method    
-    public void gantiPassword(String newPass){
-        this.password=newPass;
+//set Method  
+    public void setAddress(String address){
+        this.alamat = address;
     }
-    public void gantiEmail(String email){
-        this.email=email;
-    }
+
 //get Method    
-    public String getId(){
+    public int getNik(){
         return nik;
     }
     
     public String getNama(){
        return nama; 
     }
-    
-    public String getEmail(){
-        return email;
+    public String getJenisKelamin(){
+       if (kelamin.equals(Kelamin.Laki)){
+        return "Laki-laki" ; 
+       }
+       else{
+        return "Perempuan" ;  
+       } 
     }
     
-    public String getPassword(){
-        return password;
-    } 
-    
+    public String getAlamat(){
+       return alamat; 
+    }
     
 }
