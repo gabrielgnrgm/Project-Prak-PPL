@@ -15,15 +15,21 @@ public class User {
   }
    */
 
-  public void loginWithUsername(String username, String password){
+  public boolean loginWithUsername(String username, String password){
     if(username.equals(this.username) && password.equals(this.password)){
-      //Code to login
+      return true;
+    }
+    else{
+      return false;  
     }
   }
   
-  public void loginWithEmail(String email, String password){
+  public boolean loginWithEmail(String email, String password){
     if(email.equals(this.email) && password.equals(this.password)){
-      //Code to login
+      return true;
+    }
+    else{
+      return false;  
     }
   }
   
