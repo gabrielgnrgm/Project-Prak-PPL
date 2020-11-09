@@ -9,6 +9,10 @@ public class Pendaftaran {
     this.date=date;
   }
   
+  public int getId(){
+    return id;
+  }
+  
   public Date getDate(){
     return date;
   }
