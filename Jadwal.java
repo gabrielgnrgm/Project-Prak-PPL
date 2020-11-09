@@ -1,4 +1,5 @@
 package Aplikasi;
+import java.util.Date;
 
 public class Jadwal {
   private int id;
@@ -7,5 +8,7 @@ public class Jadwal {
     Senin, Selasa, Rabu, Kamis, Jumat, Sabtu, Minggu
   }
   
-  
+  public void change_jadwal(Date newDate){
+      this.date = newDate;
+  }
 }
