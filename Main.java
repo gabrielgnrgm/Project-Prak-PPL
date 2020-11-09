@@ -48,6 +48,24 @@ public class Main {
 
     }
     
+    public static void login(String username,String password,Pasien[] data){
+        String output="";
+        boolean verified=false;
+        for(Pasien account:data){
+            verified=account.loginWithUsername(username, password);
+            if(verified){
+                output=("Login Berhasil");
+                break;
+            }
+            
+        }
+        if(!verified){
+            output="Password atau Username Salah";
+        }
+        System.out.println(output);
+        
+    }
+    
     public static void main(String[] args) {
         Pasien[] pasien=new Pasien[10];
         pasien=loadDataPasien("Pasien.csv");
