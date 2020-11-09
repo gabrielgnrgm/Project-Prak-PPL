@@ -1,14 +1,19 @@
 package Aplikasi;
 import java.util.Date;
 
-public class Jadwal {
+public class Pendaftaran {
   private int id;
   private Date date;
-  public enum Day {
-    Senin, Selasa, Rabu, Kamis, Jumat, Sabtu, Minggu
+  public Pendaftaran(int id, Date date){
+    this.id=id;
+    this.date=date;
   }
   
-  public void change_jadwal(Date newDate){
+  public Date getDate(){
+    return date;
+  }
+  
+  public void changeDate(Date newDate){
       this.date = newDate;
   }
 }
