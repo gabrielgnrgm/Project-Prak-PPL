@@ -10,28 +10,25 @@ package Aplikasi;
  * @author USER
  */
 public class Psikiater {
-    private int id;
-    private String fullname;
-    private String address;
-    public Psikiater(int id, String fullname, String address){
-        this.id = id;
-        this.fullname = fullname;
-        this.address = address;
-    }
+    private int id_psikiater;
+    private String nama;
+    private String alamat;
     
-    public int getId(){
-        return id;
+    public Psikiater(int id, String fullname, String address){
+        this.id_psikiater = id;
+        this.nama = fullname;
+        this.alamat = address;
     }
     
     public String getFullname() {
-        return fullname;
+        return nama;
     }
     
     public String getAddress(){
-        return address;
+        return alamat;
     }
     
     public void setAddress(String address){
-        this.address = address;
+        this.alamat = address;
     }
 }
