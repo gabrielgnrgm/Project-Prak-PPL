@@ -49,21 +49,16 @@ public class Main {
     }
     
     public static void login(String username,String password,Pasien[] data){
-        String output="";
-        boolean verified=false;
+       boolean verified=false;
         for(Pasien account:data){
             verified=account.loginWithUsername(username, password);
             if(verified){
-                output=("Login Berhasil");
-                break;
+                System.out.println("Login Berhasil");
+                return true;
             }
             
         }
-        if(!verified){
-            output="Password atau Username Salah";
-        }
-        System.out.println(output);
-        
+        return false;
     }
     
     public static void main(String[] args) {
@@ -77,11 +72,16 @@ public class Main {
         String password;
         
         Scanner in=new Scanner(System.in);
-        System.out.println("Login");
-        System.out.println("UserName:");
-        user=in.nextLine();
-        System.out.println("Password");
-        password=in.nextLine();
+        boolean login=false;
+        while(!login){
+            System.out.println("Login");
+            System.out.println("UserName:");
+            user=in.nextLine();
+            System.out.println("Password");
+            password=in.nextLine();
+
+            login(user,password,pasien);
+        }
     }
     
 }
