@@ -51,6 +51,19 @@ public class Main {
     public static void main(String[] args) {
         Pasien[] pasien=new Pasien[10];
         pasien=loadDataPasien("Pasien.csv");
+        
+        Psikiater[] psikiater=new Psikiater[5];
+        
+        //Main
+        String user;
+        String password;
+        
+        Scanner in=new Scanner(System.in);
+        System.out.println("Login");
+        System.out.println("UserName:");
+        user=in.nextLine();
+        System.out.println("Password");
+        password=in.nextLine();
     }
     
 }
